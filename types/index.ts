@@ -19,3 +19,12 @@ export type Category = {
   name: string;
   slug: string;
 };
+
+// Satu istilah di halaman Glosarium.
+export type GlossaryItem = {
+  id: string;
+  term: string;
+  slug: string;
+  definition: string;
+  relatedCategoryId: string; // merujuk ke id kategori, contoh: "kat-1"
+};

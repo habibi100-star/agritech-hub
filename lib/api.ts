@@ -1,5 +1,6 @@
-import { articles, categories } from "@/data/dummy";
-import type { Article, Category } from "@/types";
+import { articles, categories, glossary } from "@/data/dummy";
+import { getInitialLetter } from "@/lib/glossary-utils";
+import type { Article, Category, GlossaryItem } from "@/types";
 
 // Mengambil artikel terbaru yang sudah terbit.
 // Input: limit (jumlah artikel maksimal, bawaan 6).
@@ -115,5 +116,37 @@ export async function getRelatedArticles(
     return [...sameCategory, ...otherCategories].slice(0, limit);
   } catch {
     throw new Error("Gagal memuat artikel terkait. Silakan coba lagi.");
+  }
+}
+
+// Mengambil semua istilah glosarium.
+// Input: tidak ada.
+// Output: Promise berisi daftar GlossaryItem, urut abjad menurut term
+// (huruf besar/kecil diabaikan, aturan urutan bahasa Indonesia).
+export async function getAllGlossary(): Promise<GlossaryItem[]> {
+  try {
+    return [...glossary].sort((a, b) =>
+      a.term.localeCompare(b.term, "id", { sensitivity: "base" }),
+    );
+  } catch {
+    throw new Error("Gagal memuat glosarium. Silakan coba lagi.");
+  }
+}
+
+// Mengambil istilah glosarium yang berawalan huruf tertentu.
+// Input: letter (huruf, contoh: "S" atau "s"; huruf kecil dan beraksen diterima).
+// Output: Promise berisi daftar GlossaryItem berawalan huruf itu, urut abjad.
+export async function getGlossaryByLetter(
+  letter: string,
+): Promise<GlossaryItem[]> {
+  try {
+    const target = getInitialLetter(letter);
+    return [...glossary]
+      .filter((item) => getInitialLetter(item.term) === target)
+      .sort((a, b) =>
+        a.term.localeCompare(b.term, "id", { sensitivity: "base" }),
+      );
+  } catch {
+    throw new Error("Gagal memuat glosarium. Silakan coba lagi.");
   }
 }

@@ -1,4 +1,4 @@
-import type { Article, Category } from "@/types";
+import type { Article, Category, GlossaryItem } from "@/types";
 
 // Data palsu kategori untuk tahap tampilan.
 export const categories: Category[] = [
@@ -146,5 +146,176 @@ export const articles: Article[] = [
     coverUrl: "",
     published: true,
     createdAt: "2026-09-18",
+  },
+];
+
+// Data palsu glosarium untuk tahap tampilan (20 istilah dasar).
+// Definisi sengaja konseptual dan tanpa angka teknis; pemilik website
+// akan memverifikasi dan menambahkan sumber sendiri.
+export const glossary: GlossaryItem[] = [
+  // Kategori IoT Pertanian (kat-1)
+  {
+    id: "glo-1",
+    term: "Drone Pertanian",
+    slug: "drone-pertanian",
+    definition:
+      "Pesawat tanpa awak yang terbang di atas lahan untuk memotret atau memantau tanaman dari udara. Hasilnya membantu petani melihat bagian lahan yang perlu diperhatikan.",
+    relatedCategoryId: "kat-1",
+  },
+  {
+    id: "glo-2",
+    term: "Gateway",
+    slug: "gateway",
+    definition:
+      "Perangkat penghubung yang menerima data dari banyak sensor lalu meneruskannya ke internet.",
+    relatedCategoryId: "kat-1",
+  },
+  {
+    id: "glo-3",
+    term: "IoT (Internet of Things)",
+    slug: "iot",
+    definition:
+      "Cara menghubungkan perangkat seperti sensor ke internet agar datanya bisa dikirim, dipantau, dan dipakai untuk mengambil keputusan.",
+    relatedCategoryId: "kat-1",
+  },
+  {
+    id: "glo-4",
+    term: "LoRa",
+    slug: "lora",
+    definition:
+      "Teknologi komunikasi radio jarak jauh yang hemat daya. Cocok untuk mengirim data ringan dari sensor di lahan yang luas.",
+    relatedCategoryId: "kat-1",
+  },
+  {
+    id: "glo-5",
+    term: "Mikrokontroler",
+    slug: "mikrokontroler",
+    definition:
+      "Komputer kecil berharga murah yang bisa membaca data dari sensor dan mengendalikan perangkat sederhana.",
+    relatedCategoryId: "kat-1",
+  },
+  {
+    id: "glo-6",
+    term: "Precision Farming",
+    slug: "precision-farming",
+    definition:
+      "Cara bertani yang memakai data untuk memberi perlakuan sesuai kebutuhan tiap bagian lahan, bukan menyamaratakannya.",
+    relatedCategoryId: "kat-1",
+  },
+  {
+    id: "glo-7",
+    term: "Sensor Kelembapan Tanah",
+    slug: "sensor-kelembapan-tanah",
+    definition:
+      "Alat yang membaca seberapa basah tanah di sekitar akar tanaman. Hasilnya membantu menentukan kapan penyiraman diperlukan.",
+    relatedCategoryId: "kat-1",
+  },
+
+  // Kategori Hidroponik (kat-2)
+  {
+    id: "glo-8",
+    term: "EC (Electrical Conductivity)",
+    slug: "ec",
+    definition:
+      "Ukuran seberapa pekat zat terlarut dalam air. Pada hidroponik, EC dipakai untuk memantau kepekatan larutan nutrisi.",
+    relatedCategoryId: "kat-2",
+  },
+  {
+    id: "glo-9",
+    term: "Hidroponik",
+    slug: "hidroponik",
+    definition:
+      "Cara bercocok tanam tanpa tanah, dengan tanaman mendapat nutrisi dari larutan air.",
+    relatedCategoryId: "kat-2",
+  },
+  {
+    id: "glo-10",
+    term: "Media Tanam",
+    slug: "media-tanam",
+    definition:
+      "Bahan tempat akar berpegang dan tumbuh, misalnya sekam bakar atau cocopeat. Pada hidroponik, media tanam menggantikan tanah.",
+    relatedCategoryId: "kat-2",
+  },
+  {
+    id: "glo-11",
+    term: "Nutrisi AB Mix",
+    slug: "nutrisi-ab-mix",
+    definition:
+      "Pupuk hidroponik berupa dua larutan pekat, A dan B, yang dicampur dengan air menjadi larutan nutrisi bagi tanaman.",
+    relatedCategoryId: "kat-2",
+  },
+  {
+    id: "glo-12",
+    term: "pH",
+    slug: "ph",
+    definition:
+      "Ukuran tingkat keasaman atau kebasaan suatu larutan. Nilai pH memengaruhi kemampuan tanaman menyerap nutrisi.",
+    relatedCategoryId: "kat-2",
+  },
+  {
+    id: "glo-13",
+    term: "Sistem NFT (Nutrient Film Technique)",
+    slug: "sistem-nft",
+    definition:
+      "Sistem hidroponik yang mengalirkan lapisan tipis larutan nutrisi melewati akar tanaman secara terus-menerus.",
+    relatedCategoryId: "kat-2",
+  },
+  {
+    id: "glo-14",
+    term: "Sistem Sumbu (Wick)",
+    slug: "sistem-sumbu",
+    definition:
+      "Hidroponik paling sederhana, saat sumbu menaikkan larutan nutrisi dari wadah ke media tanam tanpa pompa.",
+    relatedCategoryId: "kat-2",
+  },
+  {
+    id: "glo-15",
+    term: "Tandon Nutrisi",
+    slug: "tandon-nutrisi",
+    definition:
+      "Wadah penampung larutan nutrisi yang dialirkan ke tanaman. Kondisinya perlu dicek karena larutan berkurang seiring waktu.",
+    relatedCategoryId: "kat-2",
+  },
+
+  // Kategori Smart Irrigation (kat-3)
+  {
+    id: "glo-16",
+    term: "Evapotranspirasi",
+    slug: "evapotranspirasi",
+    definition:
+      "Gabungan air yang hilang dari tanah lewat penguapan dan dari tanaman lewat daun. Konsep ini menjadi dasar memperkirakan kebutuhan air tanaman.",
+    relatedCategoryId: "kat-3",
+  },
+  {
+    id: "glo-17",
+    term: "Irigasi Pintar (Smart Irrigation)",
+    slug: "irigasi-pintar",
+    definition:
+      "Sistem penyiraman yang menyesuaikan waktu dan jumlah air dengan data, seperti kelembapan tanah atau kondisi cuaca.",
+    relatedCategoryId: "kat-3",
+  },
+  {
+    id: "glo-18",
+    term: "Irigasi Tetes",
+    slug: "irigasi-tetes",
+    definition:
+      "Cara menyiram dengan meneteskan air sedikit demi sedikit di dekat akar lewat selang dan penetes, sehingga lebih hemat air.",
+    relatedCategoryId: "kat-3",
+  },
+  {
+    id: "glo-19",
+    term: "Sensor Hujan",
+    slug: "sensor-hujan",
+    definition:
+      "Alat yang mendeteksi turunnya hujan sehingga penyiraman otomatis bisa ditunda.",
+    relatedCategoryId: "kat-3",
+  },
+  {
+    id: "glo-20",
+    term: "Timer Irigasi",
+    slug: "timer-irigasi",
+    definition:
+      "Pengatur waktu yang membuka dan menutup keran air pada jadwal yang sudah ditentukan.",
+    relatedCategoryId: "kat-3",
   },
 ];
