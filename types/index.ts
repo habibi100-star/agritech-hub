@@ -6,6 +6,7 @@ export type Article = {
   title: string;
   slug: string;
   excerpt: string;
+  content: string; // isi artikel; antarparagraf dipisah satu baris kosong ("\n\n")
   categoryId: string;
   coverUrl: string;
   published: boolean;

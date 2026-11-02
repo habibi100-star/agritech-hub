@@ -125,7 +125,7 @@ export default async function Home() {
             pupuk yang dibutuhkan agar tidak boros.
           </p>
           <div className="mt-8 flex justify-center">
-            <Button href="/alat/kalkulator-pupuk" variant="light">
+            <Button href="/alat/pupuk" variant="light">
               Coba Kalkulator Pupuk
             </Button>
           </div>
