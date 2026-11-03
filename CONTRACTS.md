@@ -14,7 +14,8 @@ articles, categories, glossary, fertilizer_presets, profiles
 GET  /api/articles?category=&page=    -> daftar artikel published
 GET  /api/articles/[slug]             -> detail satu artikel
 GET  /api/glossary?q=                 -> cari istilah
-GET  /api/weather?lat=&lon=           -> prakiraan cuaca (proxy Open-Meteo)
+GET  /api/weather?lat=&lon=           -> WeatherReport (lokasi hanya koordinat), 400 bila salah, 502 bila layanan gagal
+GET  /api/geocode?q=                  -> Location[] (maks 5), q 2-60 karakter
 GET  /api/fertilizer?crop=&area=      -> hasil hitung kebutuhan pupuk
 
 ## Catatan

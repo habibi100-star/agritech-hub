@@ -24,3 +24,6 @@
 - Error ditangani dengan try/catch, pesan untuk pengguna dalam bahasa Indonesia
 - Semua halaman harus responsif (mobile dulu)
 - Jelaskan kode dengan bahasa sederhana, karena saya pemula
+- Pengecualian: fungsi cuaca ada di lib/weather.ts (bukan lib/api.ts).
+  Komponen client tidak boleh mengimpor lib/weather.ts; ia memanggil
+  /api/weather dan /api/geocode.
