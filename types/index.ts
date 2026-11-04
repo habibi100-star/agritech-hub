@@ -71,3 +71,13 @@ export type WeatherReport = {
 export type ApiError = {
   error: string;
 };
+
+// === BARU: Satu preset kebutuhan hara tanaman (kg per hektare) untuk kalkulator pupuk.
+export type FertilizerPreset = {
+  id: string;
+  crop: string; // nama tanaman, contoh: "Padi"
+  nKgHa: number; // kebutuhan nitrogen (kg/ha)
+  pKgHa: number; // kebutuhan fosfor (kg/ha)
+  kKgHa: number; // kebutuhan kalium (kg/ha)
+  sourceNote: string; // sumber resmi angka di atas
+};

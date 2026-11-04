@@ -1,6 +1,12 @@
 import { articles, categories, glossary } from "@/data/dummy";
+import { fertilizerPresets } from "@/data/fertilizer-presets";
 import { getInitialLetter } from "@/lib/glossary-utils";
-import type { Article, Category, GlossaryItem } from "@/types";
+import type {
+  Article,
+  Category,
+  FertilizerPreset,
+  GlossaryItem,
+} from "@/types";
 
 // Mengambil artikel terbaru yang sudah terbit.
 // Input: limit (jumlah artikel maksimal, bawaan 6).
@@ -148,5 +154,18 @@ export async function getGlossaryByLetter(
       );
   } catch {
     throw new Error("Gagal memuat glosarium. Silakan coba lagi.");
+  }
+}
+
+// Mengambil semua preset kebutuhan hara untuk Kalkulator Pupuk.
+// Input: tidak ada.
+// Output: Promise berisi salinan daftar FertilizerPreset, urut abjad menurut crop.
+export async function getAllFertilizerPresets(): Promise<FertilizerPreset[]> {
+  try {
+    return [...fertilizerPresets].sort((a, b) =>
+      a.crop.localeCompare(b.crop, "id"),
+    );
+  } catch {
+    throw new Error("Gagal memuat data tanaman. Silakan coba lagi.");
   }
 }

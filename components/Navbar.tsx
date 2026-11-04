@@ -7,7 +7,7 @@ const menuItems = [
   { label: "Artikel", href: "/artikel" },
   { label: "Glosarium", href: "/glosarium" },
   { label: "Cuaca", href: "/cuaca" },
-  { label: "Alat", href: "/alat" },
+  { label: "Alat", href: "/alat/pupuk" },
 ];
 
 // Bilah navigasi atas. Di layar kecil, menu dibuka/ditutup dengan tombol.

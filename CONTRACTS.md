@@ -16,7 +16,7 @@ GET  /api/articles/[slug]             -> detail satu artikel
 GET  /api/glossary?q=                 -> cari istilah
 GET  /api/weather?lat=&lon=           -> WeatherReport (lokasi hanya koordinat), 400 bila salah, 502 bila layanan gagal
 GET  /api/geocode?q=                  -> Location[] (maks 5), q 2-60 karakter
-GET  /api/fertilizer?crop=&area=      -> hasil hitung kebutuhan pupuk
+GET  /api/fertilizer?crop=&area=      -> TIDAK DIPAKAI (diputuskan 2026-11-04): perhitungan dilakukan di client lewat lib/fertilizer-utils.ts; data preset dibaca server lewat getAllFertilizerPresets() di lib/api.ts
 
 ## Catatan
 - Nama field di kode memakai camelCase, di database memakai snake_case

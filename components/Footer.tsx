@@ -4,7 +4,7 @@ const footerLinks = [
   { label: "Artikel", href: "/artikel" },
   { label: "Glosarium", href: "/glosarium" },
   { label: "Cuaca", href: "/cuaca" },
-  { label: "Alat", href: "/alat" },
+  { label: "Alat", href: "/alat/pupuk" },
 ];
 
 // Bagian kaki halaman: tautan, catatan sumber data, dan hak cipta.
