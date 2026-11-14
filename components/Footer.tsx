@@ -43,9 +43,9 @@ export default function Footer() {
               Catatan sumber data
             </h2>
             <p className="mt-3 text-sm text-background/80">
-              Semua artikel dan angka di situs ini masih berupa data contoh
-              untuk tahap tampilan. Sumber data resmi akan dicantumkan setelah
-              tersedia.
+              Artikel dan glosarium masih berupa data contoh untuk tahap
+              tampilan. Data cuaca berasal dari Open-Meteo. Angka kalkulator
+              pupuk akan dicantumkan beserta sumber resminya setelah tersedia.
             </p>
           </div>
         </div>
