@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Button from "@/components/Button";
 import SectionHeading from "@/components/SectionHeading";
 import CategoryCard from "@/components/CategoryCard";
@@ -44,23 +45,15 @@ export default async function Home() {
             </div>
           </div>
 
-          {/* Area gambar: kotak placeholder */}
-          <div
-            role="img"
-            aria-label="Gambar sementara: ilustrasi lahan pertanian"
-            className="relative aspect-4/3 w-full overflow-hidden rounded-3xl bg-linear-to-br from-primary to-primary-dark"
-          >
-            <span
-              aria-hidden="true"
-              className="absolute right-8 top-8 h-12 w-12 rounded-full bg-accent"
-            />
-            <span
-              aria-hidden="true"
-              className="absolute -bottom-10 -left-10 h-40 w-40 rounded-full bg-background/10"
-            />
-            <span
-              aria-hidden="true"
-              className="absolute -bottom-16 right-10 h-56 w-56 rounded-full bg-background/10"
+                    {/* Area gambar hero */}
+          <div className="relative aspect-4/3 w-full overflow-hidden rounded-3xl bg-primary-dark">
+            <Image
+              src="/gambar1.jpg"
+              alt="Petani Modern Gacor"
+              fill
+              priority
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
             />
           </div>
         </div>
